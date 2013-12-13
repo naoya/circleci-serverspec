@@ -5,11 +5,11 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "planbcd-centos6.3"
-  config.vm.box_url = "https://github.com/2creatives/vagrant-centos/releases/download/v0.1.0/centos64-x86_64-20131030.box"
+  config.vm.box = "opscode-centos-6.4"
+  config.vm.box_url = "https://opscode-vm-bento.s3.amazonaws.com/vagrant/opscode_centos-6.4_provisionerless.box"
 
   config.vm.define :local do |local|
-    local.vm.box = "planbcd-centos6.3"
+    local.vm.box = "opscode-centos-6.4"
     local.vm.hostname = "test-circleci"
   end
 
