@@ -1,0 +1,17 @@
+dependencies:
+  cache_directories:
+    - vagrant
+    - ~/.vagrant.d
+  pre:
+    - bash ./install-vagrant-1.4.0.sh
+
+test:
+  pre:
+    - vagrant up remote --provider=aws:
+        timeout: 600
+    - VAGRANT_INSTALLER_ENV=1 vagrant ssh-config remote --host=test-circleci > vagrant_ssh_config
+    - bundle exec knife solo bootstrap test-circleci -F vagrant_ssh_config
+  override:
+    - REMOTE_TEST=1 bundle exec rake spec
+  post:
+    - vagrant destroy remote -f
