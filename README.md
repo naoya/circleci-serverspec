@@ -13,6 +13,11 @@ CI as a Service を使ってインフラのCIする例。
 
 テストの流れは `circle.yml` を見るのがはやい
 
+CIしてるスクリーンショット
+--------------------------
+
+<a href="https://dl.dropboxusercontent.com/u/2586384/image/20131214_074223.png"><img src="https://dl.dropboxusercontent.com/u/2586384/image/20131214_074223.png" width="480" /></a>
+
 細かなところ
 ------------
 
