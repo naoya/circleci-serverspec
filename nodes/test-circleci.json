@@ -1,6 +1,7 @@
 {"run_list":
  [
      "recipe[sysstat]",
-     "recipe[nginx]"
+     "recipe[nginx]",
+     "recipe[dstat]"
  ]
 }
